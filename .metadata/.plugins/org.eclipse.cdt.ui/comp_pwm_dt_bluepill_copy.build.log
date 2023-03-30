@@ -1,0 +1,12 @@
+17:43:25 **** Incremental Build of configuration Debug for project comp_pwm_dt_bluepill_copy ****
+make -j8 all 
+arm-none-eabi-size   comp_pwm_dt_bluepill_copy.elf 
+   text	   data	    bss	    dec	    hex	filename
+   7856	     20	   1644	   9520	   2530	comp_pwm_dt_bluepill_copy.elf
+Finished building: default.size.stdout
+ 
+arm-none-eabi-objcopy -O ihex comp_pwm_dt_bluepill_copy.elf comp_pwm_dt_bluepill_copy.hex
+ 
+
+17:43:27 Build Finished. 0 errors, 0 warnings. (took 1s.881ms)
+

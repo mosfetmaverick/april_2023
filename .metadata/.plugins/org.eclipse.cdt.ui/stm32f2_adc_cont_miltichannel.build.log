@@ -1,0 +1,30 @@
+19:48:34 **** Incremental Build of configuration Debug for project stm32f2_adc_cont_miltichannel ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F207xx -c -I../Core/Inc -I../Drivers/STM32F2xx_HAL_Driver/Inc -I../Drivers/STM32F2xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F2xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:100:27: warning: passing argument 2 of 'HAL_ADC_Start_DMA' from incompatible pointer type [-Wincompatible-pointer-types]
+  100 | HAL_ADC_Start_DMA(&hadc1, &adc_values, 4);
+      |                           ^~~~~~~~~~~
+      |                           |
+      |                           uint16_t (*)[4] {aka short unsigned int (*)[4]}
+In file included from ../Core/Inc/stm32f2xx_hal_conf.h:266,
+                 from ../Drivers/STM32F2xx_HAL_Driver/Inc/stm32f2xx_hal.h:30,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Src/main.c:20:
+../Drivers/STM32F2xx_HAL_Driver/Inc/stm32f2xx_hal_adc.h:586:72: note: expected 'uint32_t *' {aka 'long unsigned int *'} but argument is of type 'uint16_t (*)[4]' {aka 'short unsigned int (*)[4]'}
+  586 | HAL_StatusTypeDef HAL_ADC_Start_DMA(ADC_HandleTypeDef* hadc, uint32_t* pData, uint32_t Length);
+      |                                                              ~~~~~~~~~~^~~~~
+arm-none-eabi-gcc -o "stm32f2_adc_cont_miltichannel.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\Tech_Software\stm32cubeide\workspace\stm32f2_adc_cont_miltichannel\STM32F207ZGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="stm32f2_adc_cont_miltichannel.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: stm32f2_adc_cont_miltichannel.elf
+ 
+arm-none-eabi-size   stm32f2_adc_cont_miltichannel.elf 
+arm-none-eabi-objdump -h -S  stm32f2_adc_cont_miltichannel.elf  > "stm32f2_adc_cont_miltichannel.list"
+   text	   data	    bss	    dec	    hex	filename
+  12640	     20	   1820	  14480	   3890	stm32f2_adc_cont_miltichannel.elf
+Finished building: default.size.stdout
+ 
+Finished building: stm32f2_adc_cont_miltichannel.list
+ 
+
+19:48:36 Build Finished. 0 errors, 1 warnings. (took 1s.562ms)
+

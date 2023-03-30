@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="ExternalProjectImportWizard">
+		<item key="WizardProjectsImportPage.STORE_NESTED_PROJECTS" value="true"/>
+	</section>
+	<section name="SmartImportWizard">
+		<item key="SmartImportRootWizardPage.STORE_HIDE_ALREADY_OPEN" value="false"/>
+		<item key="SmartImportRootWizardPage.STORE_CLOSE_IMPORTED" value="false"/>
+		<item key="SmartImportRootWizardPage.STORE_NESTED_PROJECTS" value="true"/>
+		<item key="SmartImportRootWizardPage.STORE_CONFIGURE_NATURES" value="true"/>
+		<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+			<item value="D:\encoder\pid_control.zip"/>
+			<item value="D:\encoder\motor_encoder_velocity_position"/>
+			<item value="D:\Tech_Software\STM32CubeIDE_1.10.1\workspace\comp_pwm_dt"/>
+			<item value="D:\Tech_Software\STM32CubeIDE_1.10.1\workspace\pwm_comp_dt"/>
+		</list>
+	</section>
+</section>
