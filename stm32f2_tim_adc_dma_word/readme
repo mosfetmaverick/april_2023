@@ -1,0 +1,6 @@
+TIM6= setup to count of 100ns. used to measure adc cycle time.
+TIM2= setup at 300khz from APB1 TIM CLK. Triggers ADC1 convertions
+ADC1= CH4,5,6,7 used. Scan continuous mode, DMA continuous request enabled. DMA word size circular buffer. 
+
+main.c= ADC half and full complete callbacks
+it.c  = DMA callback, does computation and averaging 
